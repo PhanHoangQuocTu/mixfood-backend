@@ -14,7 +14,7 @@ const route = require('./routes')
 route(app)
 
 //connect to database
-const db = require('./db')
+const db = require('./config/db')
 db.connect()
 
 // Sử dụng middleware body-parser

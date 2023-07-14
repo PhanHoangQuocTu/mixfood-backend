@@ -8,6 +8,7 @@ const Booking = new Schema({
     date: { type: Date },
     time: { type: String },
     note: { type: String },
+    check: { type: Boolean, default: false },
     expiresAt: { type: Date, default: Date.now, expires: '3d' } // Tạo trường expiresAt với thời gian hết hạn 3 ngày
 })
 
