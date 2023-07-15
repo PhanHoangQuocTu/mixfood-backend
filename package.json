@@ -4,7 +4,7 @@
   "description": "backend of project mix food",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --inspect ./app.js 3001",
+    "start": "nodemon --inspect ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
