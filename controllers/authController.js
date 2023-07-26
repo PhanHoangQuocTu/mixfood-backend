@@ -137,10 +137,10 @@ class authController {
 
   async signIn(req, res) {
     try {
-      const { phone, password } = req.body;
+      const { email, password } = req.body;
 
       // Kiểm tra tài khoản với email và mật khẩu
-      const account = await accountModel.findOne({ phone });
+      const account = await accountModel.findOne({ email });
 
       if (!account) {
         return res.status(400).json({ error: 'Email không tồn tại' });
@@ -154,7 +154,8 @@ class authController {
         name: account.name,
         email: account.email,
         phone: account.phone,
-        isVerified: account.isVerified
+        isVerified: account.isVerified,
+        rules: account.rules
       }
       return res.json(formResponse);
       res.status(200).json({ message: 'Đăng nhập thành công' });

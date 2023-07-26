@@ -9,7 +9,8 @@ const Booking = new Schema({
     time: { type: String },
     note: { type: String },
     check: { type: Boolean, default: false },
-    expiresAt: { type: Date, default: Date.now, expires: '3d' } // Tạo trường expiresAt với thời gian hết hạn 3 ngày
+    count: { type: Number },
+    expiresAt: { type: Date, default: Date.now, expires: '30d' } // Tạo trường expiresAt với thời gian hết hạn 3 ngày
 })
 
 module.exports = mongoose.model('booking', Booking);

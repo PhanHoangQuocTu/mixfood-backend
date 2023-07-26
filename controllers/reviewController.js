@@ -1,7 +1,18 @@
 const reviewModel = require('../model/review')
 
 class reviewController {
-    //post : create review
+    //get
+    async getReviewsToShow(req, res) {
+        try {
+            const reviewsToShow = await reviewModel.find({ isShow: true });
+            res.status(200).json(reviewsToShow);
+        } catch (error) {
+            console.error('Error retrieving reviews', error);
+            res.status(500).json({ error: 'Failed to retrieve reviews' });
+        }
+    }
+
+    //post
     async review(req, res) {
         try {
             const { name, isGood, phone, title, rating } = req.body;
