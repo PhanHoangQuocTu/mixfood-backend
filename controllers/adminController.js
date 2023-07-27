@@ -4,14 +4,14 @@ const reviewModel = require('../model/review')
 const mongoose = require('mongoose');
 
 async function initializeAccount() {
-    const existingAccount = await accountModel.findOne({ email: 'admin@gmail.com' });
+    const existingAccount = await accountModel.findOne({ email: 'mixfood1708@gmail.com' });
 
     if (!existingAccount) {
         const newAccount = new accountModel({
             name: 'admin',
-            phone: '0912123123',
-            email: 'admin@gmail.com',
-            password: 'admin',
+            phone: '0905473728',
+            email: 'mixfood1708@gmail.com',
+            password: 'T20022016V',
             isVerified: true,
             verificationCode: '123456',
             rules: true
