@@ -8,7 +8,8 @@ const Review = new Schema({
     title: { type: String },
     rating: { type: String },
     isShow: { type: Boolean, default: false },
-    createdAt: { type: Date, default: Date.now }
+    createdAt: { type: Date, default: Date.now },
+    product: { type: String }
 })
 
 module.exports = mongoose.model('review', Review);

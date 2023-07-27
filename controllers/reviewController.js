@@ -15,8 +15,8 @@ class reviewController {
     //post
     async review(req, res) {
         try {
-            const { name, isGood, phone, title, rating } = req.body;
-            const newReview = new reviewModel({ name, phone, isGood, title, rating });
+            const { name, isGood, phone, title, rating, product } = req.body;
+            const newReview = new reviewModel({ name, phone, isGood, title, rating, product });
             const savedBooking = await newReview.save();
             res.status(200).json(savedBooking);
         } catch (error) {
