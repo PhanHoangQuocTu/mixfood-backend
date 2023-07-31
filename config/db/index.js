@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 async function connect() {
     try {
-        await mongoose.connect('mongodb://127.0.0.1:27017/mixfood', {
+        await mongoose.connect('mongodb+srv://mixfood1708:T20022016V@mixfood.gtmfikh.mongodb.net/?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });

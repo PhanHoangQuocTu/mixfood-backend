@@ -40,11 +40,11 @@ class authController {
             `,
       };
 
-      transporter.sendMail(mailOptions, (error, info) => {
+      transporter.sendMail(mailOptions, (error) => {
         if (error) {
           console.error('Có lỗi khi gửi lại mật khẩu', error);
         } else {
-          console.log('Gửi lại mật khẩu thành công', info.response);
+          console.log('Gửi lại mật khẩu thành công');
         }
       });
       return res.status(200).json({ message: 'Gửi mật khẩu tài khoản thành công' });
